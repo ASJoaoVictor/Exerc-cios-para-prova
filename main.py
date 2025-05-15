@@ -1,9 +1,17 @@
+from math import ceil
+
 def q1():
     """
     Escreva um programa que solicite ao usuário um número e
     verifique se ele é par ou ímpar. Imprima uma mensagem informando o 
     resultado.
     """
+    num = int(input("Digite um número: "))
+
+    if num % 2 == 0:
+        print("Par")
+    else:
+        print("Impar")
     pass
 
 
@@ -14,6 +22,11 @@ def q2():
     Para 'texto', imprima 'to'
 
     """
+    texto = input("Digite um texto: ")
+
+    metade = ceil(len(texto)/2)
+    print(texto[metade:])
+
     pass
 
 def q3():
@@ -60,3 +73,6 @@ def q9():
 
 def q10():
     pass
+
+if __name__ == "__main__":
+    q2()
