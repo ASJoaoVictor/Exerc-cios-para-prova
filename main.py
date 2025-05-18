@@ -166,7 +166,19 @@ def q9():
     pass
 
 def q10():
+    escala = input("Digite \"C\" para Celsius, \"F\" para Fahrenheit e \"K\" para Kelvin: ")
+    temp = float(input(f"Digite o valor da temperatura em °{escala}: "))
+    match escala:
+        case "C":
+            print(f"{((temp * 1.8) + 32):.2f} F\n{(temp + 273.15):.2f} K")
+        case "F":
+            print(f"{((temp - 32) / 1.8):.2f} C\n{((temp-32)*5/9 + 273.15):.2f} K")
+        case "K":
+            if(temp < 0):
+                print("Valor de temperatura abaixo do minimo")
+            else:
+                print(f"{(temp - 273.15):.2f} C\n{((temp-273.15)*1.8 + 32):.2f} F")
     pass
 
 if __name__ == "__main__":
-    q9()
+    q10()
