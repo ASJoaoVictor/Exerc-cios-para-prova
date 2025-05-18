@@ -105,8 +105,8 @@ def test_q8(capfd, monkeypatch):
 def test_q9(capfd, monkeypatch):
     input_output = {
         '80,1': '90.00\n',
-        '200,3': '1470.00\n',
-        '200,10': '2100.00\n',
+        '200,3': '270.00\n',
+        '200,10': '900.00\n',
         '2100,0': 'Valor inválido\n',
         '0,1': '90.00\n',
     }

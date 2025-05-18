@@ -145,10 +145,28 @@ def q8():
     pass
 
 def q9():
+    """A Locadora de Veículos Eudora lançou uma grande promoção esse mês: pagando apenas R$ 90 por diária, o cliente pode alugar um carro de passeio. Para cada diária, 
+    o cliente recebe uma cota de quilometragem de 100 Km. Cada quilômetro a mais custará uma taxa extra de R$ 12.
+
+    Escreva um programa que receba como entrada a quantidade de dias e a quilometragem total rodada por um cliente dessa locadora e exiba o valor total a ser pago com duas 
+    casas decimais."""
+
+    quantDias = int(input("Quantidades de dias rodados: "))
+    quilo = float(input("Quilometragem rodada: "))
+    precoExcedido = 0
+    if(quantDias != 0):
+        if(quilo > 100 * quantDias):
+            quiloExcedido = quilo (quantDias * 100)
+            precoExcedido = quiloExcedido * 12
+
+        precoTotal = (quantDias * 90) + precoExcedido
+        print(f"{precoTotal:.2f}") 
+    else:
+        print("Valor inválido")
     pass
 
 def q10():
     pass
 
 if __name__ == "__main__":
-    q7()
+    q9()
